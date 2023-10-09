@@ -5,7 +5,6 @@ phases:
     runtime-versions:
       java: corretto17
     commands:
-      - echo Installing Maven...
       - apt-get update
       - java -version
       - mvn -version 
@@ -23,6 +22,7 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
+      - ls -alh target
 
 artifacts:
   files:

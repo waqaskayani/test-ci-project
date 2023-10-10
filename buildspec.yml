@@ -32,6 +32,8 @@ phases:
       - echo Build completed on `date`
       - echo Verifying packaged JAR...
       - mvn verify
+      - echo Copying appspec in artifacts directory
+      - cp appspec.yml target
       - echo Listing build files in target directory..
       - ls -alh target
 
